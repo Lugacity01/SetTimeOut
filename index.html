@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetTimeOut</title>
+    <link rel="stylesheet" href="setTimeout.css">
+</head>
+<body>
+
+
+    <div class="backGround">
+        <h1>Lugacity Optimal Solutions</h1>
+        <p>How I implement a delay using setTimeout to showcase a user-asked question?</p>
+        <p>Kindly examine the code available in my GitHub repository</p>
+         
+    </div>
+
+
+    <div class="content">
+        <h2>Do you love me?</h2>
+        <p id="countHide"> Wait for <span id="countsdown">10</span> seconds to diplay something sweet for you</p>
+    
+        <h1 id="demo"> </h1>
+    </div>
+
+
+    <script>
+        var countdown = 10;
+
+        var setCountDown = setInterval(function(){
+            document.getElementById("countsdown").innerHTML = countdown;
+            countdown--;
+        
+            if(countdown < 0){
+            clearInterval(setCountDown);
+            display();
+        }
+        
+        }, 1000);
+
+        
+
+        function display(){
+            document.getElementById("demo").innerHTML ='Yes, I love you <b> Lugacity😂😂 </b>';
+            document.getElementById("countHide").style.display = 'none';
+        }
+    </script>
+</body>
+</html>
